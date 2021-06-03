@@ -6,6 +6,9 @@ The motivation for this project is to create a template and workflow that
 - is as easy to set up as possible
 - uses mostly Java for handling data and views too
 
+Check out the **[demo deployment](http://springsqlitedemo.danielszabo.me/)** on my home server.
+
+
 ![Screenshot](https://github.com/szabodanika/spring-sqlite-webapp-demo/blob/master/screenshot.jpg)
 
 ### Database
@@ -35,5 +38,15 @@ The easiest way to use it is probably to download this repository or to fork it,
  unnecessary or custom parts in it so you can use this as a starting point, or you can create a clean, new project
   and copy parts from this one. 
   
-Once you have a copy of the project, simply run it with `mvn spring-boot:run`.
+Once you have a copy of the project, simply run it with
+
+`mvn spring-boot:run`
+
+or you can also compile a jar file with 
+
+`mvn clean package spring-boot:repackage`
+
+ that you can then run using 
+ 
+`java -jartarget/spring-sqlite-webapp-demo-0.0.1-SNAPSHOT.jar`.
 
