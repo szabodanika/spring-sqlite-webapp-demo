@@ -5,67 +5,68 @@
 <head>
     <title th:text="${greeting}"></title>
 
-    <!--Bootstrap 4.0.1 css-->
+    <!-- Bootstrap 4.0.1 css-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
           integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
-    <!--    custom css-->
-    <link href="style.css" rel="stylesheet">
-    <!--Bootstrap 4.0.1 JS-->
+    <!-- Bootstrap 4.0.1 JS-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
             integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
             crossorigin="anonymous"></script>
 
+    <!-- custom css-->
+    <link href="style.css" rel="stylesheet">
+
 </head>
 
 <body class="container">
-    <div >
-        <nav class="navbar navbar-light bg-light">
-            <div class="container-fluid">
-                <span th:text="${greeting}" class="navbar-brand mb-0 h1"></span>
-            </div>
-        </nav>
-        <div class="row">
-            <div class="col g-4">
-                <h3>Cameras</h3>
-                <table class="table table-striped table-hover table-bordered">
+<div>
+    <nav class="navbar navbar-light bg-light">
+        <div class="container-fluid">
+            <span th:text="${greeting}" class="navbar-brand mb-0 h1"></span>
+        </div>
+    </nav>
+    <div class="row">
+        <div class="col g-4">
+            <h3>Cameras</h3>
+            <table class="table table-striped table-hover table-bordered">
+                <tr>
+                    <th>
+                        Id
+                    </th>
+                    <th>
+                        Manufacturer
+                    </th>
+                    <th>
+                        Model
+                    </th>
+                    <th>
+                        Year
+                    </th>
+                </tr>
+                <th:block th:each="camera : ${cameras}">
                     <tr>
-                        <th>
-                            Id
-                        </th>
-                        <th>
-                            Manufacturer
-                        </th>
-                        <th>
-                            Model
-                        </th>
-                        <th>
-                            Year
-                        </th>
+                        <td th:text="${camera.id}"></td>
+                        <td th:text="${camera.manufacturer}"></td>
+                        <td th:text="${camera.model}"></td>
+                        <td th:text="${camera.year}"></td>
                     </tr>
-                    <th:block th:each="camera : ${cameras}">
-                        <tr>
-                            <td th:text="${camera.id}"></td>
-                            <td th:text="${camera.manufacturer}"></td>
-                            <td th:text="${camera.model}"></td>
-                            <td th:text="${camera.year}"></td>
-                        </tr>
-                    </th:block>
-                </table>
-            </div>
-            <div class="col g-4">
-                <h3>New Camera</h3>
-                <form action="#" th:action="@{/}" th:object="${camera}" method="post">
-                    <label class="form-label">Manufacturer</label>
-                    <input class="form-control" type="text" th:field="*{manufacturer}"/><br>
-                    <label class="form-label">Model</label>
-                    <input class="form-control" type="text" th:field="*{model}"/><br>
-                    <label class="form-label">Year</label>
-                    <input class="form-control" type="text" th:field="*{year}"/><br>
-                    <input class="btn btn-primary" type="submit" value="Submit"/>
-                </form>
-            </div>
+                </th:block>
+            </table>
+        </div>
+        <div class="col g-4">
+            <h3>New Camera</h3>
+            <form action="#" th:action="@{/}" th:object="${camera}" method="post">
+                <label class="form-label">Manufacturer</label>
+                <input class="form-control" type="text" th:field="*{manufacturer}"/><br>
+                <label class="form-label">Model</label>
+                <input class="form-control" type="text" th:field="*{model}"/><br>
+                <label class="form-label">Year</label>
+                <input class="form-control" type="text" th:field="*{year}"/><br>
+                <input class="btn btn-primary" type="submit" value="Submit"/>
+            </form>
         </div>
     </div>
+</div>
 </body>
 
 </html>

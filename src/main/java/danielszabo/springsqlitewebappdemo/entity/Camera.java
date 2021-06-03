@@ -13,7 +13,7 @@ public class Camera {
 	private Long id;
 
 	private String manufacturer, model;
-	private int year;
+	private Integer year;
 
 	public Camera() {
 	}
@@ -48,11 +48,11 @@ public class Camera {
 		this.model = model;
 	}
 
-	public int getYear() {
+	public Integer getYear() {
 		return year;
 	}
 
-	public void setYear(int year) {
+	public void setYear(Integer year) {
 		this.year = year;
 	}
 }
