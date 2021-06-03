@@ -6,6 +6,8 @@ The motivation for this project is to create a template and workflow that
 - is as easy to set up as possible
 - uses mostly Java for handling data and views too
 
+![Screenshot](https://github.com/szabodanika/spring-sqlite-webapp-demo/blob/master/screenshot.jpg)
+
 ### Database
 
 This project uses SQLite3 as its database. The database file is in db/data, but can be changed in application.properties.
@@ -32,5 +34,6 @@ template engine or even a different front-end framework completely, like VueJS. 
 The easiest way to use it is probably to download this repository or to fork it, then modify it. There are very few
  unnecessary or custom parts in it so you can use this as a starting point, or you can create a clean, new project
   and copy parts from this one. 
+  
+Once you have a copy of the project, simply run it with `mvn spring-boot:run`.
 
-![Screenshot](https://github.com/szabodanika/spring-sqlite-webapp-demo/blob/master/screenshot.jpg)
