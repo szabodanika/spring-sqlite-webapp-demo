@@ -48,5 +48,5 @@ or you can also compile a jar file with
 
  that you can then run using 
  
-`java -jartarget/spring-sqlite-webapp-demo-0.0.1-SNAPSHOT.jar`.
+`java -jar target/spring-sqlite-webapp-demo-0.0.1-SNAPSHOT.jar`.
 
